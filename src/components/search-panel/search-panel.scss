@@ -1,0 +1,21 @@
+.search-panel {
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  &__input {
+    border: none;
+    padding: 10px 25px;
+    display: block;
+    width: 100%;
+    color: #444444;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    &::placeholder {
+      color: #d5d5d5;
+    }
+    &:focus {
+      outline-color: rgba(179, 131, 226, 0.6);
+    }
+  }
+}

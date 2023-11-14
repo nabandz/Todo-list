@@ -1,0 +1,48 @@
+.tasks-add-form {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+.add-form {
+  position: relative;
+  &__input {
+    border: none;
+    padding: 10px 25px;
+    display: block;
+    width: 100%;
+    color: #444444;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+    &_label {
+      padding-right: 95px;
+    }
+    &_descr {
+      border-top: 1px solid #cdb1ea;
+      font-size: 20px;
+    }
+    &::placeholder {
+      color: #d5d5d5;
+    }
+    &:focus {
+      outline-color: rgba(179, 131, 226, 0.6);
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: 25px;
+    top: 5px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background: #f6eeff;
+    }
+  }
+}
+.fa-arrow-right {
+  color: #cdb1ea;
+}

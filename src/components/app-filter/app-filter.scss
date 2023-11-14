@@ -1,0 +1,26 @@
+.app-filter {
+  padding: 10px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid #e5e5e5;
+  background: #ffffff;
+  &__btn {
+    padding: 5px 10px;
+    background: #ffffff;
+    color: #444;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 15px;
+    border: 1px solid #444;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover,
+    &_active {
+      background: #cdb1ea;
+      color: #fff;
+      border: 1px solid #cdb1ea;
+    }
+  }
+}
