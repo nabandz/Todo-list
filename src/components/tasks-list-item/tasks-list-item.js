@@ -1,17 +1,41 @@
 import "./tasks-list-item.scss";
 
-const TasksListItem = () => {
+const TasksListItem = (props) => {
+  const { title, description, onDelete, onToggleProp, fav, finish } = props;
+
+  let classNames = "list-item";
+
+  if (fav && !finish) {
+    classNames += " list-item_fav";
+  }
+
+  if (finish) {
+    classNames += " list-item_finish";
+  }
+
   return (
-    <li className="list-item">
-      <div className="list-item__info">
-        <span className="list-item__label">Купить продукты</span>
-        <span className="list-item__descr">Молоко, кефир</span>
+    <li className={classNames}>
+      <div
+        className="list-item__info"
+        onClick={onToggleProp}
+        onKeyDown={onToggleProp}
+        data-toggle="finish"
+        tabIndex={0}
+      >
+        <span className="list-item__title">{title}</span>
+        <span className="list-item__descr">{description}</span>
       </div>
       <div className="list-item__btns">
-        <button type="button" className="list-item__btn list-item__btn_active">
+        <button
+          type="button"
+          className="list-item__btn"
+          onClick={onToggleProp}
+          data-toggle="fav"
+          disabled={finish}
+        >
           <i className="fa-solid fa-star fa-lg"></i>
         </button>
-        <button type="button" className="list-item__btn">
+        <button type="button" className="list-item__btn" onClick={onDelete}>
           <i className="fa-solid fa-trash fa-lg"></i>
         </button>
       </div>

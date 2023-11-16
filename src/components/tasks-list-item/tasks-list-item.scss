@@ -7,12 +7,15 @@
   background-color: #ffffff;
   gap: 10px;
   border-top: 1px solid #e5e5e5;
+  transition: 0.2s;
   &__info {
     display: flex;
     flex-direction: column;
+    width: inherit;
     gap: 5px;
+    cursor: pointer;
   }
-  &__label {
+  &__title {
     color: #444;
     font-size: 30px;
     font-weight: 400;
@@ -35,7 +38,7 @@
     height: 45px;
     border: none;
     border-radius: 15px;
-    background: #ffffff;
+    background: transparent;
     cursor: pointer;
     transition: 0.2s;
     &:has(.fa-star):hover {
@@ -44,11 +47,47 @@
     &:has(.fa-trash):hover {
       background: #ffd9d9;
     }
-    &_active:has(.fa-star) {
-      background: #f6eeff;
+  }
+  &:hover {
+    background-color: #f7f7f7;
+  }
+  &:focus {
+    outline: #f7f7f7;
+  }
+  &_fav {
+    .list-item {
+      &__title,
+      &__descr {
+        color: #cdb1ea;
+      }
+      &__btn {
+        &:has(.fa-star) {
+          background: #f6eeff;
+        }
+      }
     }
-    &_active:has(.fa-trash) {
-      background: #ffd9d9;
+  }
+  &_finish {
+    background-color: #f7f7f7;
+    .list-item {
+      &__title,
+      &__descr {
+        color: #d5d5d5;
+      }
+      &__title {
+        text-decoration: line-through;
+      }
+      &__btn {
+        &:has(.fa-star),
+        &:has(.fa-star):hover {
+          cursor: auto;
+          background: #ececec;
+          .fa-star,
+          .fa-trash {
+            color: #d5d5d5;
+          }
+        }
+      }
     }
   }
 }
