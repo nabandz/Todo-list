@@ -1,11 +1,11 @@
 * {
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Geist", sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: #f5f5f5;
+  background-color: #111010;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,4 +13,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 400;
+  src: local("Geist"), url(./fonts/Geist-Regular.woff2) format("opentype");
+}
+
+@font-face {
+  font-family: "Geist";
+  font-weight: 500;
+  src: local("Geist"), url(./fonts/Geist-Medium.woff2) format("opentype");
 }

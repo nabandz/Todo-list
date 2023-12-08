@@ -1,48 +1,42 @@
-.tasks-add-form {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
-}
 .add-form {
   position: relative;
   &__input {
-    border: none;
-    padding: 10px 25px;
-    display: block;
+    display: flex;
     width: 100%;
-    color: #444444;
-    font-size: 30px;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 1px solid #404040;
+    background: #262626;
+    color: #f7f7f7;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: normal;
     &_label {
       padding-right: 95px;
     }
     &_descr {
-      border-top: 1px solid #cdb1ea;
-      font-size: 20px;
+      margin-top: 0.5rem;
     }
     &::placeholder {
-      color: #d5d5d5;
+      color: #d4d4d4;
     }
     &:focus {
-      outline-color: rgba(179, 131, 226, 0.6);
+      outline-color: #f7f7f7;
     }
   }
   &__btn {
     position: absolute;
-    right: 25px;
-    top: 5px;
-    width: 45px;
-    height: 45px;
+    right: 0.75rem;
+    top: 0.7rem;
+    width: 20px;
+    height: 20px;
     border: none;
-    border-radius: 15px;
-    background: #ffffff;
+    padding: 0;
+    background-color: transparent;
     cursor: pointer;
     transition: 0.2s;
-    &:hover {
-      background: #f6eeff;
-    }
   }
 }
 .fa-arrow-right {
-  color: #cdb1ea;
+  color: #f7f7f7;
 }

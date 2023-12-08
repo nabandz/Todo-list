@@ -11,25 +11,32 @@ import "./app.scss";
 const App = () => {
   const initialData = [
     {
-      title: "Дописать доклад",
+      title: "Подготовить доклад",
       description: "По дисциплине 'Методы хранения данных'",
-      fav: true,
+      fav: false,
       finish: false,
       id: 1,
     },
     {
-      title: "Принять курьера",
-      description: "В 15:00",
-      fav: false,
+      title: "Купить продукты",
+      description: "Молоко, хлеб",
+      fav: true,
       finish: false,
       id: 2,
     },
     {
-      title: "Купить продукты",
-      description: "Молоко, кефир",
-      fav: true,
-      finish: true,
+      title: "Позвонить дяде",
+      description: "",
+      fav: false,
+      finish: false,
       id: 3,
+    },
+    {
+      title: "Прибраться в комнате",
+      description: "",
+      fav: false,
+      finish: true,
+      id: 4,
     },
   ];
   const localData = JSON.parse(localStorage.getItem("localTasks"));
@@ -115,31 +122,21 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1 className="title">Список задач</h1>
+      <h1 className="title">Список задач &#128221;</h1>
       <div className="wrapper">
-        <div className="wrapper__left">
-          <div className="search-panel">
-            <SearchPanel onUpdateSearch={onUpdateSearch} />
-            <AppFilter filter={filter} onFilterSelect={onFilterSelect} />
-          </div>
-          <div className="tasks-add-form">
-            <TasksAddForm onAdd={addItem} />
-            <TasksList
-              data={visibleData}
-              onDelete={deleteItem}
-              onToggleProp={onToggleProp}
-            />
-          </div>
+        <AppInfo tasks={tasks} favorites={favorites} finished={finished} />
+        <div className="search-panel">
+          <SearchPanel onUpdateSearch={onUpdateSearch} />
+          <AppFilter filter={filter} onFilterSelect={onFilterSelect} />
         </div>
-        <div className="wrapper__right">
-          <AppInfo tasks={tasks} favorites={favorites} finished={finished} />
+        <div className="tasks-add-form">
+          <TasksAddForm onAdd={addItem} />
+          <TasksList
+            data={visibleData}
+            onDelete={deleteItem}
+            onToggleProp={onToggleProp}
+          />
         </div>
-      </div>
-      <div className="info">
-        <span>Клик</span> для переключения статуса задачи.
-        <br />
-        <span>Звезда</span> для отметки задачи как важной. <span>Корзина</span>{" "}
-        для удаления задачи.
       </div>
     </div>
   );

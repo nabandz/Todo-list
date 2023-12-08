@@ -1,78 +1,60 @@
 .list-item {
   display: flex;
   justify-content: space-between;
-  padding: 10px 25px;
+  padding: 0.5rem 0.75rem;
   width: 100%;
   list-style: none;
-  background-color: #ffffff;
-  gap: 10px;
-  border-top: 1px solid #e5e5e5;
+  border-radius: 0.25rem;
+  border: 1px solid #404040;
+  background: #262626;
   transition: 0.2s;
   &__info {
     display: flex;
     flex-direction: column;
     width: inherit;
-    gap: 5px;
+    gap: 0.25rem;
     cursor: pointer;
   }
   &__title {
-    color: #444;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: normal;
+    color: #f7f7f7;
+    font-size: 1rem;
+    font-weight: 500;
     word-wrap: break-word;
   }
   &__descr {
-    color: #959595;
-    font-size: 20px;
+    color: #f7f7f7;
+    font-size: 0.75rem;
     font-weight: 400;
-    line-height: normal;
     word-wrap: break-word;
   }
   &__btns {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
   }
   &__btn {
-    width: 45px;
-    height: 45px;
+    width: 20px;
+    height: 20px;
     border: none;
-    border-radius: 15px;
+    padding: 0;
     background: transparent;
     cursor: pointer;
     transition: 0.2s;
-    &:has(.fa-star):hover {
-      background: #f6eeff;
-    }
-    &:has(.fa-trash):hover {
-      background: #ffd9d9;
-    }
-  }
-  &:hover {
-    background-color: #f7f7f7;
-  }
-  &:focus {
-    outline: #f7f7f7;
   }
   &_fav {
-    .list-item {
-      &__title,
-      &__descr {
-        color: #cdb1ea;
-      }
-      &__btn {
-        &:has(.fa-star) {
-          background: #f6eeff;
-        }
-      }
-    }
+    background: linear-gradient(
+      90deg,
+      rgba(255, 175, 188, 1) 0%,
+      rgba(255, 195, 160, 1) 100%
+    );
   }
   &_finish {
-    background-color: #f7f7f7;
+    background: #4d4d4d;
     .list-item {
       &__title,
       &__descr {
-        color: #d5d5d5;
+        color: #d4d4d4;
       }
       &__title {
         text-decoration: line-through;
@@ -81,10 +63,9 @@
         &:has(.fa-star),
         &:has(.fa-star):hover {
           cursor: auto;
-          background: #ececec;
           .fa-star,
           .fa-trash {
-            color: #d5d5d5;
+            color: #d4d4d4;
           }
         }
       }
@@ -92,8 +73,8 @@
   }
 }
 .fa-star {
-  color: #cdb1ea;
+  color: #f7f7f7;
 }
 .fa-trash {
-  color: #ff6262;
+  color: #f7f7f7;
 }

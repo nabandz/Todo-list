@@ -1,21 +1,22 @@
 .search-panel {
   width: 100%;
-  height: fit-content;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   &__input {
-    border: none;
-    padding: 10px 25px;
-    display: block;
     width: 100%;
-    color: #444444;
-    font-size: 30px;
+    display: flex;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #404040;
+    background: #262626;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: normal;
+    color: #f7f7f7;
     &::placeholder {
-      color: #d5d5d5;
+      color: #d4d4d4;
     }
     &:focus {
-      outline-color: rgba(179, 131, 226, 0.6);
+      outline-color: #f7f7f7;
     }
   }
 }

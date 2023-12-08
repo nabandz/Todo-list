@@ -1,26 +1,28 @@
 .app-filter {
-  padding: 10px 25px;
+  margin-top: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  border-top: 1px solid #e5e5e5;
-  background: #ffffff;
+  gap: 0.5rem;
   &__btn {
-    padding: 5px 10px;
-    background: #ffffff;
-    color: #444;
-    font-size: 20px;
+    display: inline-flex;
+    padding: 0.5rem 0.75rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #404040;
+    background: #262626;
+    color: #fff;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: normal;
-    border-radius: 15px;
-    border: 1px solid #444;
-    transition: 0.2s;
+    transition: 0.4s;
     cursor: pointer;
     &:hover,
     &_active {
-      background: #cdb1ea;
-      color: #fff;
-      border: 1px solid #cdb1ea;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 175, 188, 1) 0%,
+        rgba(255, 195, 160, 1) 100%
+      );
     }
   }
 }
