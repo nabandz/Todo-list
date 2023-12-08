@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/todo-list-app/static/css/main.c6a19be2.css",
+    "main.js": "/todo-list-app/static/js/main.42f035a7.js",
+    "static/media/Geist-Medium.woff2": "/todo-list-app/static/media/Geist-Medium.7d5b09fea8f217bbe3ba.woff2",
+    "static/media/Geist-Regular.woff2": "/todo-list-app/static/media/Geist-Regular.3664c78826390146d0fe.woff2",
+    "index.html": "/todo-list-app/index.html",
+    "main.c6a19be2.css.map": "/todo-list-app/static/css/main.c6a19be2.css.map",
+    "main.42f035a7.js.map": "/todo-list-app/static/js/main.42f035a7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6a19be2.css",
+    "static/js/main.42f035a7.js"
+  ]
+}
