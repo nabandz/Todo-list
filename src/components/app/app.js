@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import AppInfo from "../app-info/app-info";
-import SearchPanel from "../search-panel/search-panel";
-import AppFilter from "../app-filter/app-filter";
-import TasksList from "../tasks-list/tasks-list";
-import TasksAddForm from "../tasks-add-form/tasks-add-form";
+import AppInfo from "../appInfo/AppInfo";
+import SearchPanel from "../searchPanel/SearchPanel";
+import AppFilter from "../appFilter/AppFilter";
+import TasksList from "../tasksList/TasksList";
+import TasksAddForm from "../tasksAddForm/TasksAddForm";
 
 import "./app.scss";
 

@@ -1,4 +1,4 @@
-import "./tasks-list-item.scss";
+import "./tasksListItem.scss";
 
 const TasksListItem = (props) => {
   const { title, description, onDelete, onToggleProp, fav, finish } = props;

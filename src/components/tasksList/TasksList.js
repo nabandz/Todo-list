@@ -1,8 +1,14 @@
-import TasksListItem from "../tasks-list-item/tasks-list-item";
+import TasksListItem from "../tasksListItem/TasksListItem";
 
-import "./tasks-list.scss";
+import "./tasksList.scss";
 
 const TasksList = ({ data, onDelete, onToggleProp }) => {
+  if (!data.length) {
+    return (
+      <div className="tasks-add-form__text">Задачи не найдены! &#128578;</div>
+    );
+  }
+
   const elements = data.map((item) => {
     const { id, ...itemProps } = item;
     return (
